@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.aseproject.askumkc.Questionary"
+    tools:showIn="@layout/activity_questionary"
+    android:background="@android:color/background_light">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select a Category"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/common_signin_btn_light_text_disabled"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/spinner"
+        android:id="@+id/relativeLayout">
+
+
+
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+
+            android:hint=" Post your question here"
+            android:id="@+id/question"
+            android:layout_gravity="left"
+            android:textColorHint="#C4C4C9"
+            android:fontFamily="sans-serif"
+            android:textCursorDrawable="@android:color/white"
+            />
+
+        <ImageButton
+            android:id="@+id/btnSpeak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/mic"
+            android:layout_marginRight="12dp"
+            android:layout_gravity="right|bottom"
+            android:background="@null"
+
+
+            android:layout_alignBottom="@+id/question"
+            android:paddingBottom="10dp" />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Post"
+        android:id="@+id/button"
+        android:onClick="postQuestionToDb"
+        android:layout_marginTop="88dp"
+        android:background="@drawable/mybutton"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_centerHorizontal="true" />
+
+
+
+</RelativeLayout>
